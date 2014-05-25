@@ -126,6 +126,7 @@
 * "-meanFreq()-" was replaced with "wieghtedfreqmean"
 * "-meanFreq()" was replaced with "wieghtedfreqmean"
 * "angle" was replaced with "anglebetween"
+* If a variable was representing a specific direction, the label X,Y,or Z was added to the end of the variable name
 
 ## Final Variables Included in Tidy Data, Explanation of variables, and Creation Details as Applicable
 
