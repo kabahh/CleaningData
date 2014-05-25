@@ -5,14 +5,11 @@
 
 ## Study Design
 
-### Data used in the course project came from Human Activity Recognition Using Smartphones Dataset created by Smartlab - Non Linear Complex Systems Laboratory The experiments was carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. For each record, there is a 561-feature vector with time and frequency domain variables. 
+#### Data used in the course project came from Human Activity Recognition Using Smartphones Dataset created by Smartlab - Non Linear Complex Systems Laboratory The experiments was carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. For each record, there is a 561-feature vector with time and frequency domain variables. 
 
-### The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap 
-### (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body 
-### acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, 
-### a vector of features was obtained by calculating variables from the time and frequency domain.  
+#### The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.  
 
-### The data was broken down into several smaller datasets:
+#### The data was broken down into several smaller datasets:
 
 * 'features.txt': List of all features.
 * 'activity_labels.txt': Links the class labels with their activity name.
@@ -23,28 +20,23 @@
 * 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 * 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-### There were two additional informative files that helped explain the data:
+#### There were two additional informative files that helped explain the data:
 
 * 'README.txt': provided the background of the data
 * 'features_info.txt": explained the creation of the variables in the original dataset
 
-### The following is the original explanation of variable creation and naming scheme:
+#### The following is the original explanation of variable creation and naming scheme:
 
 ##Feature Selection 
 
-### The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were 
-### captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, 
-### the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency 
-### of 0.3 Hz. 
+#### The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
-### Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional 
-### signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+#### Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
-### Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' 
-### to indicate frequency domain signals). 
+#### Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
-### These signals were used to estimate variables of the feature vector for each pattern:  
-### '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+#### These signals were used to estimate variables of the feature vector for each pattern:  
+#### '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 *tBodyAcc-XYZ
 *tGravityAcc-XYZ
@@ -64,7 +56,7 @@
 *fBodyGyroMag
 *fBodyGyroJerkMag
 
-### The set of variables that were estimated from these signals are: 
+#### The set of variables that were estimated from these signals are: 
 
 *mean(): Mean value
 *std(): Standard deviation
@@ -84,7 +76,7 @@
 *bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
 *angle(): Angle between to vectors.
 
-### Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+#### Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
 *gravityMean
 *tBodyAccMean
@@ -94,20 +86,11 @@
 
 ## Data Creation
 
-### All data manipulation was handled in R 3.0.2. 
+#### All data manipulation was handled in R 3.0.2. 
 
-### First, the training and test datasets from X, Y, and Subject data were row bound together and created x.data, y.data, and sub.data respectively. Secondly, the newly created data where column bound
-### in the order of x.data, sub.data, and y.data to create all.data that contained all features, subject, and activity information. The all.data columns were named using the features.txt table. The last two
-### columns containing the subject and activity information respectively, had to be named manual due to the features.txt only containing the names of the 561 features. Next, the column containing the 
-### information on activities performed ("activities"), was recalculated as a factor variables with more descriptive names using the activity_labels.txt table. Using the GREPL command, the names of the data
-### columns were searched for any names that contained either "mean" or "std" (an short hand name for standard deviation). Eighty-six columns were identified using this method and all were pulled from the 
-### original data along with the activities and subject id columns. This is our subset of interest. From here, the subject id column ("subject") was converted to a factor variable. The data was used to 
-### calculate the aggregate values for each of the 86 features per activity per subject, resulting in data sized 180 x 88 (6 activities x 30 subjects, by 86 grepped features plus subject and activity identifiers.)
-### This aggregate data was saved in final.data. Finally, the column names of the were reworded to include more recognizable names. The methods sub and gsub were used to replace short hand names in the column
-### names with complete words. Below is the replacement scheme and a list of the final variable names. Please note: All of the final column names are lowercase and without any separators as recommended in the
-### course. The final.data was exported from R as a .txt table named tidydata.txt.
+#### First, the training and test datasets from X, Y, and Subject data were row bound together and created x.data, y.data, and sub.data respectively. Secondly, the newly created data where column bound in the order of x.data, sub.data, and y.data to create all.data that contained all features, subject, and activity information. The all.data columns were named using the features.txt table. The last two columns containing the subject and activity information respectively, had to be named manual due to the features.txt only containing the names of the 561 features. Next, the column containing the information on activities performed ("activities"), was recalculated as a factor variables with more descriptive names using the activity_labels.txt table. Using the GREPL command, the names of the data columns were searched for any names that contained either "mean" or "std" (an short hand name for standard deviation). Eighty-six columns were identified using this method and all were pulled from the original data along with the activities and subject id columns. This is our subset of interest. From here, the subject id column ("subject") was converted to a factor variable. The data was used to calculate the aggregate values for each of the 86 features per activity per subject, resulting in data sized 180 x 88 (6 activities x 30 subjects, by 86 grepped features plus subject and activity identifiers). This aggregate data was saved in final.data. Finally, the column names of the were reworded to include more recognizable names. The methods sub and gsub were used to replace short hand names in the column names with complete words. Below is the replacement scheme and a list of the final variable names. Please note: All of the final column names are lowercase and without any separators as recommended in the course. The final.data was exported from R as a .txt table named tidydata.txt.
 
-## Variable Naming Scheme
+### Variable Naming Scheme
 
 * "tBodyAcc" was replaced with "timebodyacceleration"
 * "tGravityAcc" was replaced with "timegravityacceleration"
@@ -122,7 +105,7 @@
 * "angle" was replaced with "anglebetween"
 * If a variable was representing a specific direction, the label X,Y,or Z was added to the end of the variable name
 
-## Final Variables Included in Tidy Data, Explanation of variables, and Creation Details as Applicable
+### Final Variables Included in Tidy Data, Explanation of variables, and Creation Details as Applicable
 
 * "subject" : Contains the subject ID, ranges from 1-30                                               
 * "activity": Contains the activity ID, values include: laying, sitting, standing, walking, walkingdownstairs, walkingupstairs                                              
@@ -213,19 +196,11 @@
 * "anglebetweenyandgravitymean" : the angle between the vectors y and gravitymean                          
 * "anglebetweenzandgravitymean" : the angle between the vectors z and gravitymean
 
-#### Note: gravitymean is not included in the dataset
-#### It is defined as gravitymean: vector obtained by averaging the signals in a signal window sample. This is solely used in the "anglebetween" variables
+##### Note: gravitymean is not included in the dataset
+##### It is defined as gravitymean: vector obtained by averaging the signals in a signal window sample. This is solely used in the "anglebetween" variables
 
-#### Grand-Means were calculated by taking the average of the average value for each feature, grouped by person and activity. This means, each combination of activity and person has their own
-#### grand-mean. Standard deviations were calculated in a similar manner; as the average standard deviation for each feature by person and activity. 
-#### Person and subject are interchangeable terms in the context. 
+##### Grand-Means were calculated by taking the average of the average value for each feature, grouped by person and activity. This means, each combination of activity and person has their own
+##### grand-mean. Standard deviations were calculated in a similar manner; as the average standard deviation for each feature by person and activity. 
+##### Person and subject are interchangeable terms in the context. 
 
-## Code can be found in the run_analysis.R file
-
-
-
-
-
-
-
-
+##### Code can be found in the run_analysis.R file
